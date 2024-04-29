@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background-color: rgba(168, 168, 168, 0.699);
+}
+.btn {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  margin-left: 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.watch-container {
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(243, 238, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch-container .watch {
+  height: 100%;
+  width: 60%;
+  text-align: center;
+  padding-top: 80px;
+}
+.watch p {
+  color: rgb(68, 68, 68);
+
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+.watch .start-btn {
+  background-color: #05b805;
+}
+.watch .stop-btn {
+  background-color: #ff0000;
+}
+.watch .reset-btn {
+  background-color: #ff4500;
+}
