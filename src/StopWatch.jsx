@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import AddElapseTime from "./assets/AddElapseTime";
 export default function StopWatch() {
+  const [timeList, setTimeList] = useState([]);
   const [isRunning, setIsRunning] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
   const intervalIdRef = useRef(null);
@@ -29,6 +30,18 @@ export default function StopWatch() {
     setElapsedTime(0);
   }
 
+  function save() {
+    setTimeList([
+      `${String(Math.floor((elapsedTime / (1000 * 60)) % 60)).padStart(
+        2,
+        "0"
+      )}:${String(Math.floor((elapsedTime / 1000) % 60)).padStart(
+        2,
+        "0"
+      )}:${String(Math.floor((elapsedTime % 1000) / 10)).padStart(2, "0")}`,
+      ...timeList,
+    ]);
+  }
   function timeFormat() {
     let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
     let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
@@ -56,6 +69,12 @@ export default function StopWatch() {
         <button className="reset-btn btn" onClick={reset}>
           Reset
         </button>
+        <button className="add-btn btn" onClick={save}>
+          Add{" "}
+        </button>
+        <div className="list">
+          <AddElapseTime timeList={timeList} />
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: rgb(243, 238, 230);
+}
 ::-webkit-scrollbar {
   width: 14px;
   height: 14px;
@@ -29,7 +31,6 @@
   font-family: sans-serif;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(243, 238, 230);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +56,18 @@
 }
 .watch .reset-btn {
   background-color: #ff4500;
+}
+.watch .add-btn {
+  background-color: #275cf0;
+}
+/* /time list///////////////////// */
+.watch-container .watch .list ul {
+  border: 1px solid red;
+  font-size: 35px;
+  color: rgb(68, 68, 68);
+  list-style: none;
+  margin-top: 30px;
+}
+.watch-container .watch .list ul > li {
+  margin-top: 5px;
 }
