@@ -55,7 +55,9 @@ export default function StopWatch() {
 
     return `${minutes}:${seconds}:${milliseconds}`;
   }
-
+  function handleDelete(index) {
+    setTimeList(timeList.filter((_, i) => i !== index));
+  }
   return (
     <div className="watch-container">
       <div className="watch">
@@ -73,7 +75,7 @@ export default function StopWatch() {
           Add{" "}
         </button>
         <div className="list">
-          <AddElapseTime timeList={timeList} />
+          <AddElapseTime timeList={timeList} onDelete={handleDelete} />
         </div>
       </div>
     </div>

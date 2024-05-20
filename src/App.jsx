@@ -1,11 +1,11 @@
 import StopWatch from "./StopWatch";
 
-function App() {
+import React, { useEffect, useRef } from "react";
+
+export default function App() {
   return (
     <>
       <StopWatch />
     </>
   );
 }
-
-export default App;
