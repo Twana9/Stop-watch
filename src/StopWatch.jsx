@@ -8,6 +8,12 @@ export default function StopWatch() {
   const startTimeRef = useRef(0);
 
   useEffect(() => {
+    //first the effect works but the condition fo running is false so nothing will happen
+    // after clicking on start the isRunning is changed now that makes the useEffect works
+    //now the condition is true so the code runs , then we click on stop or reset the isRunning is
+    //changed so the useEffect is clean up  and and the useEffect is working to finish new round but
+    //  the condition is false now so the useEffect is has no side effect code to run
+
     if (isRunning) {
       intervalIdRef.current = setInterval(() => {
         setElapsedTime(new Date() - startTimeRef.current);
