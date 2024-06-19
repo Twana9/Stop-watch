@@ -70,4 +70,8 @@ body {
 }
 .watch-container .watch .list ul > li {
   margin-top: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: red;
 }

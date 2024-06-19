@@ -49,6 +49,15 @@ export default function StopWatch() {
     ]);
   }
   function timeFormat() {
+    //     % 60:
+
+    // The % operator is the modulo operator, which returns the remainder of a division operation.
+    // Applying % 60 to the number of seconds will give you the remainder when the number of seconds is divided by 60. This is used to get the number of seconds that have passed within the current minute.
+    // For example, if the number of seconds is 125, 125 % 60 would be 5, because 125 seconds is 2 minutes and 5 seconds.
+    // Math.floor(...):
+
+    // Math.floor() is a JavaScript function that rounds down to the nearest integer.
+    // This ensures that the value of seconds is an integer, which is typically desired when dealing with time values.
     let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
     let minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
     let seconds = Math.floor((elapsedTime / 1000) % 60);
